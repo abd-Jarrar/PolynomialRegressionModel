@@ -21,7 +21,13 @@ poly_reg= PolynomialFeatures(degree=2)
 x_poly=poly_reg.fit_transform(x)
 lin_reg_2=LinearRegression()
 lin_reg_2.fit(x_poly,y)
-
+## Visualising the Linear Regression results
+plt.scatter(x,y,color='red')
+plt.plot(x,lin_reg.predict(x),color='blue')
+plt.title('Linear Regression')
+plt.xlabel('Position lable')
+plt.ylabel('Salary')
+plt.show()
 
 
 
